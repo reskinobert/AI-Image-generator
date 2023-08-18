@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/spinner.css" />
+    <link rel="stylesheet" href="css/3d.css" />
+
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/3d.js" type="module" defer></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+    <title>OpenAI Image Genrator</title>
+
+  </head>
+
+  <body>  
+
+    <main>
+      <section class="showcase">
+        <form id="image-form">
+          <h1>Describe Your Image</h1>
+          <div class="form-control">
+            <input type="text" id="prompt" placeholder="Enter Text" />
+          </div>
+          <!-- size -->
+          <div class="form-control">
+            <select name="size" id="size">
+              <option value="small">Small</option>
+              <option value="medium" selected>Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Generate</button>
+        </form>
+      </section>
+
+      <section class="image">
+        <div class="image-container">
+          <h2 class="msg"></h2>
+          <img src="" alt="" id="image" />
+        </div>
+      </section>
+    </main>
+
+    <header>
+        <div class="triggers">
+          <span class="s1" data-disabled="true" data-color="#3D8CD0">AI</span>
+          <span class="s2" data-disabled="true" data-color="#D32A7B">IMAGE</span>
+          <span class="s3" data-disabled="true" data-color="#2AD37A">GENERATOR</span>
+        </div>
+    </header>
+
+    <div class="spinner"></div>
+    
+  </body>
+</html>
